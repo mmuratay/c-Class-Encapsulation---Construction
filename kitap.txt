@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPSiniflar
+{
+    class kitap
+    {
+        private string _Adi;
+
+        public string Adi
+        {
+            get { return _Adi; }
+            set { _Adi = value; }
+        }
+
+        private int _ISDN;
+
+        public int ISDN
+        {
+            get { return _ISDN; }
+            set { _ISDN = value; }
+        }
+
+
+        private string _yazar;
+
+        public string Yazar
+        {
+            get { return _yazar; }
+            set { _yazar = value; }
+        }
+        public kitap()
+        {
+        }
+
+    }
+}

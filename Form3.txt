@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Collections;
+
+namespace OOPSiniflar
+{
+    public partial class Form3 : Form
+    {
+        public Form3()
+        {
+            InitializeComponent();
+        }
+
+
+        List<kitap> kitaplar = new List<kitap>(); 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            kitap kitap1 = new kitap(); 
+
+            kitap1.Adi = textBox1.Text;
+            kitap1.ISDN = Convert.ToInt32(textBox2.Text);
+            kitap1.Yazar = textBox3.Text;
+
+            kitaplar.Add(kitap1); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (var item in kitaplar)
+            {
+                Console.WriteLine(item.Adi+""+item.ISDN+""+item.Yazar);
+            }
+
+            for (int i = 0; i < kitaplar.Count-1; i++)
+            {
+                Console.WriteLine(kitaplar[i].Adi + "" + kitaplar[i].ISDN + "" + kitaplar[i].Yazar);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {            
+            KitapStruct kitap1; 
+            kitap1.Adi = "home deus";
+            kitap1.ISDN = 1005;
+            kitap1.Yazar = "nouh harirği";
+            kitap1.Sayfa = 345;
+        }
+    }
+}
